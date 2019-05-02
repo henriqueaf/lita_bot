@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 module Lita
   module Handlers
-    # Public: definitions to Hello class interface
+    # Public: A class that implements Lita::Handler to use as a handler
     class Hello < Handler
       route(
-        /oi/,
+        %r{/oi},
         :hello,
-        command: true,
+        command: false, # if true, force the message to be prefixed with @BotName
         help: { hello: 'responde uma mensagem motivacional.' }
       )
 
@@ -30,7 +32,6 @@ module Lita
       ].freeze
 
       def hello(response)
-        puts '=====> ' + response.inspect
         response.reply(MESSAGES.sample)
       end
 
