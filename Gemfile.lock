@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/henriqueaf/correios_br.git
+  revision: 4f4a19d1c42883be6c988603335b59edfc7a8308
+  specs:
+    correios_br (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,10 +77,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  correios_br!
   dotenv
   lita
   lita-telegram-plus
   pry-byebug
+
+RUBY VERSION
+   ruby 2.5.1p57
 
 BUNDLED WITH
    1.16.2

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'dotenv/load'
-require_relative 'handlers/hello'
+require './handlers'
 
 Lita.configure do |config|
   # The name your robot will use.
